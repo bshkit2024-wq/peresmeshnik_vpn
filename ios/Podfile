@@ -1,18 +1,25 @@
-﻿# Uncomment this line to define a global platform for your project
-platform :ios, '14.0'
+﻿platform :ios, '14.0'
 
-# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
-
-project 'Runner.xcodeproj'
-
-flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+  # Flutter Pods
+  pod 'Flutter', :podspec => '../.symlinks/flutter/ios/Flutter.podspec'
+  pod 'FlutterPluginRegistrant', :podspec => '../.symlinks/plugins/FlutterPluginRegistrant/FlutterPluginRegistrant.podspec'
+
+  # Plugin Pods
+  pod 'app_links', :path => '../.symlinks/plugins/app_links/ios'
+  pod 'file_picker', :path => '../.symlinks/plugins/file_picker/ios'
+  pod 'flutter_native_splash', :path => '../.symlinks/plugins/flutter_native_splash/ios'
+  pod 'package_info_plus', :path => '../.symlinks/plugins/package_info_plus/ios'
+  pod 'path_provider_foundation', :path => '../.symlinks/plugins/path_provider_foundation/darwin'
+  pod 'shared_preferences_foundation', :path => '../.symlinks/plugins/shared_preferences_foundation/darwin'
+  pod 'sqlite3_flutter_libs', :path => '../.symlinks/plugins/sqlite3_flutter_libs/darwin'
+  pod 'url_launcher_ios', :path => '../.symlinks/plugins/url_launcher_ios/ios'
+  pod 'vpn_plugin', :path => '../.symlinks/plugins/vpn_plugin/ios'
 end
 
 post_install do |installer|
