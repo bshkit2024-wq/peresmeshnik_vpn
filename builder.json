@@ -1,0 +1,17 @@
+{
+  "project": "peresmeshnik_vpn",
+  "platform": "ios",
+  "github": {
+    "owner": "bshkit2024-wq",
+    "repo": "peresmeshnik_vpn"
+  },
+  "ios": {
+    "path": "ios"
+  },
+  "flutter": {
+    "version": "3.38.3",
+    "watch": {}
+  },
+  "reactNative": {},
+  "mobai": {}
+}
